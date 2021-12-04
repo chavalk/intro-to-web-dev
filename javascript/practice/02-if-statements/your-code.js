@@ -7,8 +7,8 @@
 
 // You are given four variables with numeric values.
 
-var kidsWhoWantToSwim = 25;   // number of kids who want to swim
-var kidsWhoWantDoArchery = 5; // number of kids who want to do archery
+var kidsWhoWantToSwim = 12;   // number of kids who want to swim
+var kidsWhoWantDoArchery = 11; // number of kids who want to do archery
 var totalSwimmers = 0;        // number of kids who are actually swimming in the afternoon
 var totalArchers = 0;         // number of kids who are actually doing archery in the afternoon
 
@@ -28,8 +28,17 @@ var totalArchers = 0;         // number of kids who are actually doing archery i
 // ------------------------
 
 // Write your code here:
+if (kidsWhoWantToSwim % 2 === 0) {
+    totalSwimmers = kidsWhoWantToSwim;
+    totalArchers = kidsWhoWantDoArchery;
+} else {
+    totalArchers = kidsWhoWantDoArchery + kidsWhoWantToSwim;
+}
 
-
+if (kidsWhoWantToSwim < 0 || kidsWhoWantDoArchery < 0) {
+    totalSwimmers = 0;
+    totalArchers = 0;
+}
 
 // When you're finished, save the changes and open practice/02-if-statements/index.html with your browser. (The html file is is the same subfolder as this file, and it already includes code to reference this file.)
 // Open the JavaScript console in your browser's developer tools.
