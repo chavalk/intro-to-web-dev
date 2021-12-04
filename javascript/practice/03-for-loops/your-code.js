@@ -15,14 +15,27 @@ for (var n = 1; n <= 7; n++) {
     console.log(n);
 }
 
+var loopCounter = 1;
+while (loopCounter <= 7) {
+    console.log(loopCounter);
+    loopCounter++;
+}
+
 // 1. FOR ONE TO TEN
 // =================
 // Write a for loop that loops through the numbers 1 through 10.
 // Print each number to the JavaScript console.
 console.log("FOR ONE TO TEN");
 // Write your code here:
+for (var n = 1; n <= 10; n++) {
+    console.log(n);
+}
 
-
+loopCounter = 1;
+while (loopCounter <= 10) {
+    console.log(loopCounter);
+    loopCounter++;
+}
 
 // 2. COUNT BY TWOS FROM TWO TO TWELVE
 // ===================================
@@ -39,8 +52,15 @@ console.log("FOR ONE TO TEN");
 // 12
 console.log("COUNT BY TWOS FROM TWO TO TWELVE");
 // Write your code here:
+for (var n = 2; n <= 12; n = n + 2) {
+    console.log(n);
+}
 
-
+loopCounter = 2;
+while (loopCounter <= 12) {
+    console.log(loopCounter);
+    loopCounter = loopCounter + 2;
+}
 
 // 3. COUNT BACKWARD FROM SIX
 // ==========================
@@ -58,14 +78,21 @@ console.log("COUNT BY TWOS FROM TWO TO TWELVE");
 // 0
 console.log("COUNT BACKWARD FROM SIX");
 // Write your code here:
+for (var n = 6; n >= 0; n--) {
+    console.log(n);
+}
 
-
+loopCounter = 6;
+while (loopCounter >= 0) {
+    console.log(loopCounter);
+    loopCounter--;
+}
 
 // 4. SUM EVENS
 // ============
 // You're given two variables with numeric values:
 
-var limit = 10; // We stop looping when we reach this number.
+var limit = 8; // We stop looping when we reach this number.
 var sum = 0;    // We add even numbers to this variable.
 
 // Write a for loop that loops from 0 to limit.
@@ -77,15 +104,30 @@ var sum = 0;    // We add even numbers to this variable.
 // What happens if you set limit to a negative number?
 console.log("SUM EVENS");
 // Write your code here:
+for (var n = 0; n <= limit; n++) {
+    if (n % 2 === 0) {
+        sum = sum + n;
+    }
+}
+console.log("limit = %s, sum = %s", limit, sum);
 
+sum = 0;
+loopCounter = 0;
+while (loopCounter <= limit) {
+    if (loopCounter % 2 === 0) {
+        sum = sum + loopCounter;
+    }
+    loopCounter++;
+}
 console.log("limit = %s, sum = %s", limit, sum);
 
 // 5. FIND A FAVORITE NUMBER
 // =========================
 // You're given two variables with numeric values:
 
-var winniesFavoriteNumber = 53; // Winnie's favorite number
-var kaisFavoriteNumber = 44;    // Kai's favorite number
+var winniesFavoriteNumber = 40; // Winnie's favorite number
+var kaisFavoriteNumber = 30;    // Kai's favorite number
+var mikesFavoriteNumber = 10;
 
 // Write a for loop that loops until it reaches either winniesFavoriteNumber 
 // or kaisFavoriteNumber and then stop.
@@ -94,8 +136,21 @@ var kaisFavoriteNumber = 44;    // Kai's favorite number
 // Try adding a third, or forth, or fifth favorite number!
 console.log("FIND A FAVORITE NUMBER");
 // Write your code here:
+for (var n = 0; n <= winniesFavoriteNumber + kaisFavoriteNumber + mikesFavoriteNumber; n++) {
+    if (n === kaisFavoriteNumber || n === winniesFavoriteNumber || n === mikesFavoriteNumber) {
+        console.log(n);
+        break;
+    }
+}
 
-
+loopCounter = 0;
+while (loopCounter <= winniesFavoriteNumber + kaisFavoriteNumber + mikesFavoriteNumber) {
+    if (n === kaisFavoriteNumber || n === winniesFavoriteNumber || n === mikesFavoriteNumber) {
+        console.log(n);
+        break;
+    }
+    loopCounter++;
+}
 
 // CHALLENGE: WHILE LOOPS
 // ======================
